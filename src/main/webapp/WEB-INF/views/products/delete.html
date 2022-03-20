@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout::head"></head>
+<body>
+<div th:replace="/layout::header"></div>
+<form method="post">
+    <fieldset>
+        <legend><h3>DELETE PRODUCT</h3></legend>
+        <div class="info">
+            <lable><h5>ID</h5></lable>
+            <input type="text" name="id" th:value="${product.id}" disabled size="300" style="height:30px; margin-bottom:15px">
+        </div>
+        <div class="info">
+            <lable><h5>NAME</h5></lable>
+            <input type="text" name="name" th:value="${product.name}" disabled size="300" style="height:30px ; margin-bottom:15px">
+        </div>
+        <div class="info">
+            <lable><h5>PRICE</h5></lable>
+            <input type="text" name="price" th:value="${product.price}" disabled size="300" style="height:30px; margin-bottom:15px">
+        </div>
+        <div class="info">
+            <lable><h5>QUANTITY</h5></lable>
+            <input type="text" name="quantity" th:value="${product.quantity}" disabled size="300"style="height:30px; margin-bottom:15px">
+        </div>
+        <div class="info">
+            <lable><h5>DESCRIPTION</h5></lable>
+            <input type="text" name="description" th:value="${product.description}" disabled size="300" style="height:30px; margin-bottom:15px">
+        </div>
+        <br>
+        <input class="btn btn-primary" type="submit" th:value="DELETE">
+    </fieldset>
+</form>
+
+</body>
+</html>
